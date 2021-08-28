@@ -1,0 +1,40 @@
+Create User terraformUser in AWS console for Programmer CLI access with Administrator access.
+
+Inside the path of Terraform Script folder -> Run command "terraform init" : It will see all terraform script and based on provider it will download and install plugins to work with AWS.
+
+If you get Time Sncronozation Error - Please set your system time to automatically. Voila! it will solve the issue.
+
+terraform plan -destroy : will show you the execution plan what terraform will be going to execute when apply.
+terraform plan -destroy -out=example.plan : will store the plan in mentioned file and will run exactly when we run apply.
+terraform show example.plan : will read the plan from mentioned file.
+terraform apply "example.plan" : this will apply plan mentioned in file.
+
+
+Terraform State :
+1.	It means state of the resources in AWS.
+2.	It represents local representation of state of resources in Terraform as State File.
+It is entirely possible for these two be out of sync. Until local state is refreshed.
+
+terraform.tfstate : maintains state file locally
+terraform state : list all available options
+terraform state list : to find list of resources provisioned
+terraform show -json : show data in json format from state file.
+
+
+Terraform Graph :
+
+terraform graph : generates a graphical view for terraform plan.
+To show understandable graphical view -> visit webgraphviz.com -> And paste content from command "terraform graph".
+
+Terraform Apply :
+
+terraform plan -destroy -out=example.plan - This file can be used only once for apply operation. To again use this we need to generate plan file again.
+terraform apply -auto-approve : This will not prompt for approval when applying the changes.
+
+=============================
+Infrastructure AS A Code
+=============================
+Resources : 
+1.	Building blocks of Terraform Code
+2.	Define the "what" of your infrastructure.
+3.	Different settings for every provider.
