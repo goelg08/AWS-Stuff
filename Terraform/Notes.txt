@@ -38,3 +38,9 @@ Resources :
 1.	Building blocks of Terraform Code
 2.	Define the "what" of your infrastructure.
 3.	Different settings for every provider.
+
+Statis IP : It is to have static ip for web servers. Can be acheived using eip (Elastic IP) of AWS resource.
+
+aws_eip_association : is used to decouple eip and instance in terraform.
+
+terraform state show aws_elb.prod_web - To see the load balancer dns_name
