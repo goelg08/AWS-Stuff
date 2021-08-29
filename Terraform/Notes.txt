@@ -44,3 +44,21 @@ Statis IP : It is to have static ip for web servers. Can be acheived using eip (
 aws_eip_association : is used to decouple eip and instance in terraform.
 
 terraform state show aws_elb.prod_web - To see the load balancer dns_name
+
+MODULES :
+Bundle together a subset of code
+Pass in arguments
+Work like custom resources
+There is already a default module
+
+Module should have main.tf file as starting point
+variables.tf - Input variables
+outputs.tf - Output variables
+
+There's lot more :
+Remote modules
+Versioning
+Providers and provider versions
+registry.terraform.io : People registered there own modules
+
+While using modules we need to run "terraform init"
